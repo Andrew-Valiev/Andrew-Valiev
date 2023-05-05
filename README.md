@@ -20,5 +20,5 @@
 ### Follow Me
 
 [![Telegram](https://img.shields.io/badge/-Telegram-190004?style=for-the-badge&logo=telegram&logoColor=31a5db)](https://t.me/Andrew_az)
-[![Telegram](https://img.shields.io/badge/-Telegram2-190004?style=for-the-badge&logo=telegram&logoColor=31a5db)](https://t.me/Solvery_Sonya)
+
 
