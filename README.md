@@ -21,10 +21,10 @@
 
 - [Checklists](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/checklists)
 - [Test-Cases](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/test-cases)
-- [Bug-Reports](https://github.com)
-- [SQL Queries](https://github.com)
-- [Postman Collection](https://github.com)
-- [Bash scripts](https://github.com)
+- [Bug-Reports](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/Bug-Reports)
+- [SQL Queries](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/sql-queries)
+- [Postman Collection](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/postman-collection)
+- [Bash scripts](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/bash-scripts)
 
 ### Follow Me
 
