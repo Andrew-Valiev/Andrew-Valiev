@@ -21,6 +21,10 @@
 
 - [Checklists](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/checklists)
 - [Test-Cases](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/test-cases)
+- [Bug-Reports](https://github.com)
+- [SQL Queries](https://github.com)
+- [Postman Collection](https://github.com)
+- [Bash scripts](https://github.com)
 
 ### Follow Me
 
