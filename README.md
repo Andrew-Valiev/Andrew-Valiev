@@ -28,6 +28,7 @@
 - [Postman Collection](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/postman-collection)
 - [Bash scripts](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bash_scripts)
 - [Markdown](https://github.com/Andrew-Valiev/Andrew-Valiev/blob/main/markdown/markdown_syntax.md)
+- [Git Bash](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/git/git_bash.md)
 
 ### Follow Me
 
