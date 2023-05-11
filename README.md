@@ -26,7 +26,7 @@
 - [Bug-Reports](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/Bug-Reports)
 - [SQL Queries](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/sql-queries)
 - [Postman Collection](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/postman-collection)
-- [Bash scripts](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bash_scripts) 
+- [Bash scripts](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bash_scripts)
 - [Markdown](https://github.com/Andrew-Valiev/Andrew-Valiev/blob/main/markdown/markdown_syntax.md)
 
 ### Follow Me
