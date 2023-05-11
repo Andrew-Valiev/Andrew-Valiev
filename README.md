@@ -19,13 +19,13 @@
 ![bash][linkBash]
 ![Markdown](https://img.shields.io/badge/-Markdown-190004?style=for-the-badge&logo=Markdown&logoColor=136bel)
 
-### Testing Documentation
+### Testing Documentation and Tools
 
-- [Checklists](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/checklists)
-- [Test-Cases](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/test-cases)
-- [Bug-Reports](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/Bug-Reports)
-- [SQL Queries](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/sql-queries)
-- [Postman Collection](https://github.com/Andrew-Valiev/Andrew-Valiev/tree/postman-collection)
+- [Checklists](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/checklists)
+- [Test-Cases](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/test_cases)
+- [Bug-Reports](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bug_reports)
+- [SQL Queries](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/sql_queries)
+- [Postman Collection](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/postman_collection)
 - [Bash scripts](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bash_scripts)
 - [Markdown](https://github.com/Andrew-Valiev/Andrew-Valiev/blob/main/markdown/markdown_syntax.md)
 - [Git Bash](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/git/git_bash.md)
