@@ -58,7 +58,7 @@ fi
 done
 ```
 
->### Циклы for в стиле C
+>### Циклы `for` в стиле `C`
 
 ```bash
 for (( i=1; i <= 10; i++ ))
@@ -67,7 +67,7 @@ echo "number is $i"
 done
 ```
 
->### Цикл while
+>### Цикл `while`
 
 ```bash
 var1=5
@@ -106,7 +106,7 @@ done
 done
 ```
 
->### Команда break
+>### Команда `break`
 
 ```bash
 for var1 in 1 2 3 4 5 6 7 8 9 10
@@ -132,7 +132,7 @@ var1=$(( $var1 + 1 ))
 done
 ```
 
->### Команда continue
+>### Команда `continue`
 
 ```bash
 for (( var1 = 1; var1 < 15; var1++ ))
