@@ -982,7 +982,6 @@ TRUNCATE TABLE movies; -- удалит все строки из таблицы m
 SHOW TABLES;   -- вывод таблиц для текущей базы данных.    
 
 SHOW TABLES FROM movies;  -- вывод таблиц для указанной базы данных movies.
-
 ```
 
 ---
