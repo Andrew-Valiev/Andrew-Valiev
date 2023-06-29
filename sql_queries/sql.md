@@ -1,8 +1,8 @@
-# ![MySQL](https://img.shields.io/badge/-MySQL-190004?style=for-the-badge&logo=mysql&logoColor=00618a) 
+# ![MySQL](https://img.shields.io/badge/-MySQL-190004?style=for-the-badge&logo=mysql&logoColor=00618a)
 
 Источник <https://stepik.org/course/133728/syllabus>
 
-## SQL queries 
+## SQL queries
 
 ---
 
