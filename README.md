@@ -22,7 +22,7 @@
 
 ### Testing Documentation and Tools
 
-- [Exploratory Testing](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/checklists)
+- [Exploratory Testing](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/exploratory_testing)
 - [Checklists](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/checklists)
 - [Test-Cases](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/test_cases)
 - [Bug-Reports](https://github.com/Andrew-Valiev/andrew-valiev/tree/main/bug_reports)
