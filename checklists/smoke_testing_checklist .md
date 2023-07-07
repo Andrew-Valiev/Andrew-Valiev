@@ -1,4 +1,4 @@
-# Чек лист smoke тестирования
+# Чек-лист smoke тестирования
 
 > ## Тест план smoke тестирования
 
@@ -23,10 +23,10 @@
     - Добавление товаров в корзину
     - Изменение количества товаров в корзине
     - Удаление товаров из корзины
+    - Пересчёт стоимости заказа при изменении количества товаров
     - Оформление заказа без регистрации
     - Оформление заказа с использованием зарегистрированного аккаунта
     - Выбор способа доставки и оплаты заказа
-    - Пересчёт стоимости заказа при изменении количества товаров, выборе способа доставки и оплаты
 
 5. Отслеживание заказа:
     - Отправка уведомления о состоянии заказа (подтверждение оформления, оплаты, отправки)
@@ -36,13 +36,11 @@
 6. Система обратной связи:
     - Форма обратной связи
     - Ответ на обращение клиента
-    - Пользовательское соглашение, политика конфиденциальности и правила использования сайта
 
 7. Тестирование на разных устройствах и браузерах:
 
     - Проверка работы интернет-магазина на различных устройствах (ноутбуки, смартфоны, планшеты)
     - Проверка работы интернет-магазина в различных браузерах (Google Chrome, Mozilla Firefox, Opera, Safari)
-    - Кроме того, можно проверить работу дополнительных функций: подписка на новости, возвращение товара, система скидок и акций, интеграция с социальными сетями.
 
 ---
 
@@ -136,7 +134,7 @@
       <td align='justify'>Товар найден</td>
       <td align='justify'>Товар найден</td>
       <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >Некоторые фильтры не применимы с категорией товаров</td>
+      <td align='justify' >Некоторые фильтры не применимы к товару</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_008</td>
@@ -177,7 +175,6 @@
       <td align='justify'>Количество товаров в корзине изменено</td>
       <td align='justify'>FAIL</td>
       <td align='justify' >-</td>
-      <td align='justify' >Некоторые фильтры не применимы с категорией товаров</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_012</td>
@@ -189,5 +186,103 @@
       <td align='justify'>PASS</td>
       <td align='justify' >-</td>
     </tr>
-   
+    <tr align='justify'>
+      <td>sm_t_013</td>
+      <td align='centrer'>Aliexpress | КОРЗИНА | Пересчёт стоимости заказа при изменении количества товаров </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Стоимость товара изменена</td>
+      <td align='justify'>При изменении количества товаров сумма заказа равна нулю</td>
+      <td align='justify'>FAIL</td>
+      <td align='justify'>-</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_014</td>
+      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа без регистрации </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Оформление заказа без регистрации не возможно</td>
+      <td align='justify'>Оформление заказа без регистрации не возможно</td>
+      <td align='justify'>PASS</td>
+      <td align='justify'>-</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_015</td>
+      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа с зарегистрированного аккаунта </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Заказ оформлен</td>
+      <td align='justify'>-</td>
+      <td align='justify'>SKIP</td>
+      <td align='justify'>-</td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_016</td>
+      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа доставки </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Адрес доставки выбран</td>
+      <td align='justify'>Адрес доставки выбран</td>
+      <td align='justify'>PASS</td>
+      <td align='justify'>-</td>
+    </tr>
+      <tr align='justify'>
+      <td>sm_t_017</td>
+      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа оплаты </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Способ оплаты выбран</td>
+      <td align='justify'>-</td>
+      <td align='justify'>SKIP</td>
+      <td align='justify'>-</td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_018</td>
+      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Отправка уведомления о состоянии заказа </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Уведомление получено</td>
+      <td align='justify'>-</td>
+      <td align='justify'>SKIP</td>
+      <td align='justify'>-</td>
+    </tr>
+      <tr align='justify'>
+      <td>sm_t_019</td>
+      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка статуса заказа в личном кабинете </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Статус изменен</td>
+      <td align='justify'>-</td>
+      <td align='justify'>SKIP</td>
+      <td align='justify'>-</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_020</td>
+      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка даты доставки </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Дата указанна</td>
+      <td align='justify'>Дата указанна</td>
+      <td align='justify'>PASS</td>
+      <td align='justify'>-</td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_021</td>
+      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка даты доставки </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Дата указанна</td>
+      <td align='justify'>Дата указанна</td>
+      <td align='justify'>PASS</td>
+      <td align='justify'>-</td>
+    </tr>
   </table>
+
+---
+
+>### Итоги smoke тестирования
+
+- Пройдено 13 тестов.
+- Правлено 3 теста.
+- Пропущено 5 тестов.
+- Замечаний составлено 2.
