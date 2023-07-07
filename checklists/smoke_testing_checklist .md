@@ -63,7 +63,6 @@
         <th>Ожидаемый результат</th>
         <th>Фактический результат</th>
         <th>Статус</th>
-        <th>Комментарии</th>
       </tr>
     </thead>
     <tr align='justify'>
@@ -74,7 +73,6 @@
       <td align='justify'>Аккаунт создан</td>
       <td align='justify'>Аккаунт создан</td>
       <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >-</td>
     </tr>
      <tr align='justify'>
       <td>sm_t_002</td>
@@ -84,7 +82,6 @@
       <td align='justify'>Аккаунт создан</td>
       <td align='justify'>-</td>
       <td align='justify'>SKIP</td>
-      <td align='justify' >-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_003</td>
@@ -94,7 +91,6 @@
       <td align='justify'>Вход в систему</td>
       <td align='justify'>Вход в систему выполнен</td>
       <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >-</td>
     </tr>
      <tr align='justify'>
       <td>sm_t_004</td>
@@ -104,7 +100,6 @@
       <td align='justify'>Пароль изменен</td>
       <td align='justify'>Письмо с кодом не пришло</td>
       <td align='justify' style="color: red;">FAIL</td>
-      <td align='justify' >-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_005</td>
@@ -113,8 +108,7 @@
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар найден</td>
       <td align='justify'>Товар найден</td>
-      <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >В результатах поиска присутствуют сопутствующие товары </td>
+      <td align='justify' style="color: green;">PASS*</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_006</td>
@@ -124,7 +118,6 @@
       <td align='justify'>Товар найден</td>
       <td align='justify'>Товар найден</td>
       <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >- </td>
     </tr>
      <tr align='justify'>
       <td>sm_t_007</td>
@@ -133,8 +126,7 @@
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар найден</td>
       <td align='justify'>Товар найден</td>
-      <td align='justify' style="color: green;">PASS</td>
-      <td align='justify' >Некоторые фильтры не применимы к товару</td>
+      <td align='justify' style="color: green;">PASS**</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_008</td>
@@ -144,7 +136,6 @@
       <td align='justify'>Товары присутствуют</td>
       <td align='justify'>Товары присутствуют</td>
       <td align='justify'>PASS</td>
-      <td align='justify' >-</td>
     </tr>
      <tr align='justify'>
       <td>sm_t_009</td>
@@ -154,7 +145,6 @@
       <td align='justify'>Информация о товаре присутствует</td>
       <td align='justify'>Информация о товаре присутствует</td>
       <td align='justify'>PASS</td>
-      <td align='justify' >-</td>
     </tr>
       <tr align='justify'>
       <td>sm_t_010</td>
@@ -164,7 +154,6 @@
       <td align='justify'>Товары в корзину добавлены </td>
       <td align='justify'>Товары в корзину добавлены</td>
       <td align='justify'>PASS</td>
-      <td align='justify' >-</td>
     </tr>
       <tr align='justify'>
       <td>sm_t_011</td>
@@ -174,7 +163,6 @@
       <td align='justify'>Количество товаров в корзине изменено </td>
       <td align='justify'>Количество товаров в корзине изменено</td>
       <td align='justify'>FAIL</td>
-      <td align='justify' >-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_012</td>
@@ -184,7 +172,6 @@
       <td align='justify'>Товар из корзины удален </td>
       <td align='justify'>Товар из корзины удален</td>
       <td align='justify'>PASS</td>
-      <td align='justify' >-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_013</td>
@@ -194,7 +181,6 @@
       <td align='justify'>Стоимость товара изменена</td>
       <td align='justify'>При изменении количества товаров сумма заказа равна нулю</td>
       <td align='justify'>FAIL</td>
-      <td align='justify'>-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_014</td>
@@ -204,7 +190,6 @@
       <td align='justify'>Оформление заказа без регистрации не возможно</td>
       <td align='justify'>Оформление заказа без регистрации не возможно</td>
       <td align='justify'>PASS</td>
-      <td align='justify'>-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_015</td>
@@ -214,7 +199,6 @@
       <td align='justify'>Заказ оформлен</td>
       <td align='justify'>-</td>
       <td align='justify'>SKIP</td>
-      <td align='justify'>-</td>
     </tr>
      <tr align='justify'>
       <td>sm_t_016</td>
@@ -224,7 +208,6 @@
       <td align='justify'>Адрес доставки выбран</td>
       <td align='justify'>Адрес доставки выбран</td>
       <td align='justify'>PASS</td>
-      <td align='justify'>-</td>
     </tr>
       <tr align='justify'>
       <td>sm_t_017</td>
@@ -234,7 +217,6 @@
       <td align='justify'>Способ оплаты выбран</td>
       <td align='justify'>-</td>
       <td align='justify'>SKIP</td>
-      <td align='justify'>-</td>
     </tr>
      <tr align='justify'>
       <td>sm_t_018</td>
@@ -244,7 +226,6 @@
       <td align='justify'>Уведомление получено</td>
       <td align='justify'>-</td>
       <td align='justify'>SKIP</td>
-      <td align='justify'>-</td>
     </tr>
       <tr align='justify'>
       <td>sm_t_019</td>
@@ -254,7 +235,6 @@
       <td align='justify'>Статус изменен</td>
       <td align='justify'>-</td>
       <td align='justify'>SKIP</td>
-      <td align='justify'>-</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_020</td>
@@ -264,25 +244,17 @@
       <td align='justify'>Дата указанна</td>
       <td align='justify'>Дата указанна</td>
       <td align='justify'>PASS</td>
-      <td align='justify'>-</td>
-    </tr>
-     <tr align='justify'>
-      <td>sm_t_021</td>
-      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка даты доставки </td>
-      <td align='centrer'>Высокий</td>
-      <td align='centrer'>Высокий</td>
-      <td align='justify'>Дата указанна</td>
-      <td align='justify'>Дата указанна</td>
-      <td align='justify'>PASS</td>
-      <td align='justify'>-</td>
     </tr>
   </table>
 
 ---
 
+- \* В результатах поиска присутствуют сопутствующие товары
+- \** Некоторые фильтры не применимы к товару
+
 >### Итоги smoke тестирования
 
-- Пройдено 13 тестов.
+- Пройдено 12 тестов.
 - Правлено 3 теста.
 - Пропущено 5 тестов.
 - Замечаний составлено 2.
