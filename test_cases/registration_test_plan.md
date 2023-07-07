@@ -3,7 +3,7 @@
 > ## Регистрация нового пользователя
 
 - [x] Создание нового аккаунта.  
-[Ссылка на тест-кейс T_C-001](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
+[Ссылка на тест-кейс T_C-001](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/test_cases/test_case_T_C-001.md)
 - [x] Проверьте получения письма.
 - [x] Вход в систему с нового аккаунта.
 - [x] Выход из системы.
