@@ -3,7 +3,7 @@
 > ## Регистрация нового пользователя
 
 - [x] Создание нового аккаунта.  
-[Ссылка на тест кейс EX_T-003-01](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
+[Ссылка на тест-кейс T_C-001](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
 - [x] Проверьте получения письма.
 - [x] Вход в систему с нового аккаунта.
 - [x] Выход из системы.
@@ -24,9 +24,9 @@
 > ## Пара логин пароль
 
 - [x] Корректный логин и корректный пароль.
-- Корректный логин и некорректный пароль.
+- [x] Корректный логин и некорректный пароль.
 - [x] Некорректный логин и корректный пароль.
-- Некорректный логин и некорректный пароль.
+- [x] Некорректный логин и некорректный пароль.
 [Ссылка на таблица принятия решений](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
   
   ---
@@ -42,6 +42,8 @@
 - [x] Проверить копирование и вставку.
 - [x] Проверить КЭ и ГЗ.
 [Ссылка на таблица КЭ и ГЗ](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
+
+  ---
 
 > ## Email
 
