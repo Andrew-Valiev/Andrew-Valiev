@@ -18,7 +18,6 @@
 
     - Отображение товаров в каталоге
     - Просмотр карточки товара с полной информацией
-    - Актуальность цен и наличие товара на складе
 
 4. Корзина и оформление заказа:
     - Добавление товаров в корзину
@@ -138,6 +137,57 @@
       <td align='justify'>Товар найден</td>
       <td align='justify' style="color: green;">PASS</td>
       <td align='justify' >Некоторые фильтры не применимы с категорией товаров</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_008</td>
+      <td align='centrer'>Aliexpress | КАТАЛОГ ТОВАРОВ | Отображение товаров в каталоге </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товары присутствуют</td>
+      <td align='justify'>Товары присутствуют</td>
+      <td align='justify'>PASS</td>
+      <td align='justify' >-</td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_009</td>
+      <td align='centrer'>Aliexpress | КАТАЛОГ ТОВАРОВ | Просмотр карточки товара с полной информацией </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Информация о товаре присутствует</td>
+      <td align='justify'>Информация о товаре присутствует</td>
+      <td align='justify'>PASS</td>
+      <td align='justify' >-</td>
+    </tr>
+      <tr align='justify'>
+      <td>sm_t_010</td>
+      <td align='centrer'>Aliexpress | КОРЗИНА | Добавление товаров в корзину </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товары в корзину добавлены </td>
+      <td align='justify'>Товары в корзину добавлены</td>
+      <td align='justify'>PASS</td>
+      <td align='justify' >-</td>
+    </tr>
+      <tr align='justify'>
+      <td>sm_t_011</td>
+      <td align='centrer'>Aliexpress | КОРЗИНА | Изменение количества товаров в корзине </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Количество товаров в корзине изменено </td>
+      <td align='justify'>Количество товаров в корзине изменено</td>
+      <td align='justify'>FAIL</td>
+      <td align='justify' >-</td>
+      <td align='justify' >Некоторые фильтры не применимы с категорией товаров</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_012</td>
+      <td align='centrer'>Aliexpress | КОРЗИНА | Удаление товаров из корзины </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товар из корзины удален </td>
+      <td align='justify'>Товар из корзины удален</td>
+      <td align='justify'>PASS</td>
+      <td align='justify' >-</td>
     </tr>
    
   </table>
