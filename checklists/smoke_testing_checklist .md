@@ -82,7 +82,6 @@
       <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
-      <td align='centrer'>Браузер: Яндекс  v.23.5.3.904 (64-bit) <br> OC: Windows 11 Pro 21H2 Сборка 22000.2057</td>
       <td align='justify'>Вход в систему</td>
       <td align='justify'>Вход в систему выполнен</td>
       <td align='justify'>PASS</td>
