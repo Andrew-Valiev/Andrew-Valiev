@@ -66,6 +66,7 @@
         <th>Ожидаемый результат</th>
         <th>Фактический результат</th>
         <th>Статус</th>
+        <th>Комментарии</th>
       </tr>
     </thead>
     <tr align='justify'>
@@ -73,18 +74,70 @@
       <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
-      <td align='justify'>Вход в систему</td>
-      <td align='justify'>Вход в систему выполнен</td>
-      <td align='justify'>PASS</td>
+      <td align='justify'>Аккаунт создан</td>
+      <td align='justify'>Аккаунт создан</td>
+      <td align='justify' style="color: green;">PASS</td>
+      <td align='justify' >-</td>
     </tr>
      <tr align='justify'>
-      <td>sm_t_001</td>
-      <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
+      <td>sm_t_002</td>
+      <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Создание нового аккаунта </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Аккаунт создан</td>
+      <td align='justify'>-</td>
+      <td align='justify'>SKIP</td>
+      <td align='justify' >-</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_003</td>
+      <td align='centrer'>Aliexpress | ВХОД В СИСТЕМУ | Вход в систему с зарегистрированного аккаунта </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Вход в систему</td>
       <td align='justify'>Вход в систему выполнен</td>
-      <td align='justify'>PASS</td>
+      <td align='justify' style="color: green;">PASS</td>
+      <td align='justify' >-</td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_004</td>
+      <td align='centrer'>Aliexpress | ПАРОЛЬ | Восстановление пароля </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Пароль изменен</td>
+      <td align='justify'>Письмо с кодом не пришло</td>
+      <td align='justify' style="color: red;">FAIL</td>
+      <td align='justify' >-</td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_005</td>
+      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Поиск по названию товара </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify' style="color: green;">PASS</td>
+      <td align='justify' >В результатах поиска присутствуют сопутствующие товары </td>
+    </tr>
+    <tr align='justify'>
+      <td>sm_t_006</td>
+      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Поиск по категории товаров </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify' style="color: green;">PASS</td>
+      <td align='justify' >- </td>
+    </tr>
+     <tr align='justify'>
+      <td>sm_t_007</td>
+      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Фильтрация результатов поиска </td>
+      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Высокий</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify'>Товар найден</td>
+      <td align='justify' style="color: green;">PASS</td>
+      <td align='justify' >Некоторые фильтры не применимы с категорией товаров</td>
     </tr>
    
   </table>
