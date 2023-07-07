@@ -49,6 +49,11 @@
 
 > ### Результаты проведения smoke тестирования интернет магазина <https://aliexpress.ru.>
 
+**Окружение:**  
+
+- Браузер: Яндекс  v.23.5.3.904 (64-bit)
+- OC: Windows 11 Pro 21H2 Сборка 22000.2057
+
 ---
 
 <table style='width:100%' >
@@ -58,7 +63,6 @@
         <th>Заголовок</th>
         <th>Приоритет</th>
         <th>Серьезность</th>
-        <th>Окружение</th>
         <th>Ожидаемый результат</th>
         <th>Фактический результат</th>
         <th>Статус</th>
@@ -69,7 +73,6 @@
       <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
-      <td align='centrer'>Браузер: Яндекс  v.23.5.3.904 (64-bit) <br> OC: Windows 11 Pro 21H2 Сборка 22000.2057</td>
       <td align='justify'>Вход в систему</td>
       <td align='justify'>Вход в систему выполнен</td>
       <td align='justify'>PASS</td>
