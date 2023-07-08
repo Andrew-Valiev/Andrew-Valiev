@@ -31,7 +31,7 @@
 - [x] Корректный логин и некорректный пароль.
 - [x] Некорректный логин и корректный пароль.
 - [x] Некорректный логин и некорректный пароль.
-[Ссылка на таблица принятия решений](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
+[Ссылка на таблицу принятия решений](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/test_design/decision_table.md)
   
   ---
 
