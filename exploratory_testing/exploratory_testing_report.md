@@ -4,7 +4,7 @@
 
 ## Тест план исследовательского тестирования
 
-[Ссылка на тест план](../assets/exploratory%20testing.jpg)
+[Ссылка на тест план](https://drive.google.com/file/d/1Vy0f76I7qCiQ_oNLmPmwaO-BOFWufZFh/view?usp=sharing)
 
 ---
 
