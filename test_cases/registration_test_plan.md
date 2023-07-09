@@ -46,7 +46,7 @@
 [Ссылка на тест-кейс T_C-006](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/test_cases/test_case_T_C-006.md)
 - [x] Проверить копирование и вставку.
 - [x] Проверить КЭ и ГЗ.
-[Ссылка на таблица КЭ и ГЗ](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-003-01.md)
+[Ссылка на таблицу КЭ и ГЗ](https://github.com/Andrew-Valiev/andrew-valiev/blob/main/test_design/equivalence_classes_and_border_values.md)
 
   ---
 
