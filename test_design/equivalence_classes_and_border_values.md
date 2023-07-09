@@ -16,7 +16,6 @@
         <th></th>
         <th></th>
         <th></th>
-        <th></th>
       </tr>
         <tr align='center'>
         <th >Буквы верхнего регистра</th>
