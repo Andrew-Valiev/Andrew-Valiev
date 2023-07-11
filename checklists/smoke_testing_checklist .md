@@ -67,7 +67,7 @@
     </thead>
     <tr align='justify'>
       <td>sm_t_001</td>
-      <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
+      <td align='justify'>СОЗДАНИЕ АККАУНТА | Вход через аккаунт Гугл </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Аккаунт создан</td>
@@ -76,7 +76,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_002</td>
-      <td align='justify'>Aliexpress | СОЗДАНИЕ АККАУНТА | Создание нового аккаунта </td>
+      <td align='justify'> СОЗДАНИЕ АККАУНТА | Создание нового аккаунта </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Аккаунт создан</td>
@@ -85,7 +85,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_003</td>
-      <td align='centrer'>Aliexpress | ВХОД В СИСТЕМУ | Вход в систему с зарегистрированного аккаунта </td>
+      <td align='centrer'>ВХОД В СИСТЕМУ | Вход в систему с зарегистрированного аккаунта </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Вход в систему</td>
@@ -94,7 +94,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_004</td>
-      <td align='centrer'>Aliexpress | ПАРОЛЬ | Восстановление пароля </td>
+      <td align='centrer'>ПАРОЛЬ | Восстановление пароля </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Пароль изменен</td>
@@ -103,7 +103,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_005</td>
-      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Поиск по названию товара </td>
+      <td align='centrer'>ПОИСК ТОВАРОВ | Поиск по названию товара </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар найден</td>
@@ -112,7 +112,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_006</td>
-      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Поиск по категории товаров </td>
+      <td align='centrer'>ПОИСК ТОВАРОВ | Поиск по категории товаров </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар найден</td>
@@ -121,7 +121,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_007</td>
-      <td align='centrer'>Aliexpress | ПОИСК ТОВАРОВ | Фильтрация результатов поиска </td>
+      <td align='centrer'>ПОИСК ТОВАРОВ | Фильтрация результатов поиска </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар найден</td>
@@ -130,7 +130,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_008</td>
-      <td align='centrer'>Aliexpress | КАТАЛОГ ТОВАРОВ | Отображение товаров в каталоге </td>
+      <td align='centrer'>КАТАЛОГ ТОВАРОВ | Отображение товаров в каталоге </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товары присутствуют</td>
@@ -139,7 +139,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_009</td>
-      <td align='centrer'>Aliexpress | КАТАЛОГ ТОВАРОВ | Просмотр карточки товара с полной информацией </td>
+      <td align='centrer'>КАТАЛОГ ТОВАРОВ | Просмотр карточки товара с полной информацией </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Информация о товаре присутствует</td>
@@ -148,7 +148,7 @@
     </tr>
       <tr align='justify'>
       <td>sm_t_010</td>
-      <td align='centrer'>Aliexpress | КОРЗИНА | Добавление товаров в корзину </td>
+      <td align='centrer'>КОРЗИНА | Добавление товаров в корзину </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товары в корзину добавлены </td>
@@ -157,7 +157,7 @@
     </tr>
       <tr align='justify'>
       <td>sm_t_011</td>
-      <td align='centrer'>Aliexpress | КОРЗИНА | Изменение количества товаров в корзине </td>
+      <td align='centrer'>КОРЗИНА | Изменение количества товаров в корзине </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Количество товаров в корзине изменено </td>
@@ -166,7 +166,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_012</td>
-      <td align='centrer'>Aliexpress | КОРЗИНА | Удаление товаров из корзины </td>
+      <td align='centrer'>КОРЗИНА | Удаление товаров из корзины </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Товар из корзины удален </td>
@@ -175,7 +175,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_013</td>
-      <td align='centrer'>Aliexpress | КОРЗИНА | Пересчёт стоимости заказа при изменении количества товаров </td>
+      <td align='centrer'>КОРЗИНА | Пересчёт стоимости заказа при изменении количества товаров </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Стоимость товара изменена</td>
@@ -184,7 +184,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_014</td>
-      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа без регистрации </td>
+      <td align='centrer'>ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа без регистрации </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Оформление заказа без регистрации не возможно</td>
@@ -193,7 +193,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_015</td>
-      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа с зарегистрированного аккаунта </td>
+      <td align='centrer'>ОФОРМЛЕНИЕ ЗАКАЗА | Оформление заказа с зарегистрированного аккаунта </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Заказ оформлен</td>
@@ -202,7 +202,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_016</td>
-      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа доставки </td>
+      <td align='centrer'>ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа доставки </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Адрес доставки выбран</td>
@@ -211,7 +211,7 @@
     </tr>
       <tr align='justify'>
       <td>sm_t_017</td>
-      <td align='centrer'>Aliexpress | ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа оплаты </td>
+      <td align='centrer'>ОФОРМЛЕНИЕ ЗАКАЗА | Выбор способа оплаты </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Способ оплаты выбран</td>
@@ -220,7 +220,7 @@
     </tr>
      <tr align='justify'>
       <td>sm_t_018</td>
-      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Отправка уведомления о состоянии заказа </td>
+      <td align='centrer'>ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Отправка уведомления о состоянии заказа </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Уведомление получено</td>
@@ -229,7 +229,7 @@
     </tr>
       <tr align='justify'>
       <td>sm_t_019</td>
-      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка статуса заказа в личном кабинете </td>
+      <td align='centrer'>ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка статуса заказа в личном кабинете </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Статус изменен</td>
@@ -238,7 +238,7 @@
     </tr>
     <tr align='justify'>
       <td>sm_t_020</td>
-      <td align='centrer'>Aliexpress | ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка даты доставки </td>
+      <td align='centrer'>ОТСЛЕЖИВАНИИЕ ЗАКАЗА | Проверка даты доставки </td>
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Дата указанна</td>
