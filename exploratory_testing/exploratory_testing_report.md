@@ -56,6 +56,11 @@
 <td style="text-align:left"><strong>Баг:</strong> сортировка товаров по возрастанию цены не корректно сортирует цены попадаются товары с более высокой ценой внутри результатов сортировки. Рис. 6 Тоже самое происходит и с фильтром по диапазону цен. Рис. 6.1  <br> <a href="https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-006-01.md">Ссылка на баг репорт EX_T-006-01</a> <br> <br> <strong>Баг:</strong> сортировка товаров фильтр &quot;Toп-товары&quot; не корректно сортирует товары попадаются товары и без &quot;Toп&quot; рейтинга Рис. 6.2 Тоже самое относиться и к фильтрам &quot;Бесплатная доставка&quot;, &quot;Мгновенная отправка&quot;, &quot; Высокий рейтинг&quot; присутствуют товары которые не входят в эти группы.  <br> <a href="https://github.com/Andrew-Valiev/andrew-valiev/blob/main/bug_reports/bug_report_EX_T-006-02.md">Ссылка на баг репорт EX_T-006-02</a></td>
 <td style="text-align:left">Рис. 6 <img src="../assets/img_ex_t/cost_low.png" alt="Изображение 6" title="Сортировка цен по возрастанию"> Рис. 6.1 <img src="../assets/img_ex_t/cost_low_filter.png" alt="Изображение 6.1" title="Сортировка цен по возрастанию фильтр"> Рис. 6.2 <img src="../assets/img_ex_t/top.png" alt="Изображение 6.2" title="Сортировка Toп-товары"></td>
 </tr>
+<tr>
+<td style="text-align:left">EX_T-007 <br> Корзина</td>
+<td style="text-align:left">В козине с товарами нет отображения общей суммы покупки, пока не будет поставлен чекбокс напротив товара. Рис. 7 <strong>Предложение по улучшению:</strong> убрать чекбоксы из корзины, чтобы видеть сразу общую стоимость товаров. Это повысит удобство использования и избавит пользователей от лишних действий. </td>
+<td style="text-align:left">Рис. 7 <img src="../assets/img_ex_t/basket.png" alt="Изображение 7" title="Корзина товаров цена"></td>
+</tr>
 </tbody>
 </table>
 
