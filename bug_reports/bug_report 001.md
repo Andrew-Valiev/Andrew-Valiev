@@ -37,4 +37,4 @@
 * Поле "Фамилия" заполнено данными из аккаунта "Google"
 
 Приложение:  
-![фамилия](../assets/img_ex_t/surname.png "Фамилия "google"")
+![Фамилия](../assets/img_ex_t/surname.png "Фамилия google")
