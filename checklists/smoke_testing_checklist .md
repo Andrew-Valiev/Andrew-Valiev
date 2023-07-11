@@ -80,8 +80,8 @@
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Аккаунт создан</td>
-      <td align='justify'>-</td>
-      <td align='justify'>SKIP</td>
+      <td align='justify'>Аккаунт создан</td>
+      <td align='justify'>PASS</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_003</td>
@@ -105,7 +105,7 @@
       <td>sm_t_005</td>
       <td align='centrer'>ПОИСК ТОВАРОВ | Поиск по названию товара </td>
       <td align='centrer'>Высокий</td>
-      <td align='centrer'>Высокий</td>
+      <td align='centrer'>Средний</td>
       <td align='justify'>Товар найден</td>
       <td align='justify'>Товар найден</td>
       <td align='justify' style="color: green;">PASS*</td>
@@ -162,7 +162,7 @@
       <td align='centrer'>Высокий</td>
       <td align='justify'>Количество товаров в корзине изменено </td>
       <td align='justify'>Количество товаров в корзине изменено</td>
-      <td align='justify'>FAIL</td>
+      <td align='justify'>PASS</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_012</td>
@@ -179,8 +179,8 @@
       <td align='centrer'>Высокий</td>
       <td align='centrer'>Высокий</td>
       <td align='justify'>Стоимость товара изменена</td>
-      <td align='justify'>При изменении количества товаров сумма заказа равна нулю</td>
-      <td align='justify'>FAIL</td>
+      <td align='justify'>Стоимость товара изменена</td>
+      <td align='justify'>PASS***</td>
     </tr>
     <tr align='justify'>
       <td>sm_t_014</td>
@@ -251,10 +251,11 @@
 
 - \* В результатах поиска присутствуют сопутствующие товары
 - \** Некоторые фильтры не применимы к товару
+- \*** Нужно поставить чекбоксы для изменения суммы заказа
 
 >### Итоги smoke тестирования
 
-- Пройдено 12 тестов.
-- Правлено 3 теста.
-- Пропущено 5 тестов.
-- Замечаний составлено 2.
+- Пройдено 15 тестов.
+- Правлен 1 тест.
+- Пропущено 4 теста.
+- Замечаний составлено 3.
