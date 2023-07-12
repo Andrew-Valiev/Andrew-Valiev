@@ -203,3 +203,28 @@
 </table>
 
 > ## Email
+
+<table style='width:100%'>
+<tbody>
+<tr><td>КЛАССЫ ЭКВИВАЛЕНТНОСТИ</td><td> Значения</td><td> Тестовые данные позитивные</td><td> Тестовые данные негативные</td></tr>
+<tr><td>Буквы верхнего регистра</td><td> A-Z</td><td> PION@GOOGLE.COM</td><td>-</td></tr>
+<tr><td>Буквы нижнего регистра</td><td> a-z</td><td> pion@google.com</td><td>-</td></tr>
+<tr><td>Цифры</td><td> 0-9</td><td> pion2356@google.com</td><td>-</td></tr>
+<tr><td>Cпециальные символы</td><td> !#$%&'*+-/=?^_`{|}~ </td><td> pion-cs@google.com <br> "()<>[]:;@\\"!#$%&'-/=?^_`{}| ~.a"@google.com </td><td> pion\cs@google.com <br> a"b(c)de:f;gi[j\k]l@example.com <br> (ни один из специальных символов в локальной части не разрешен вне кавычек)</td></tr>
+<tr><td>Пробелы</td><td> </td><td> pion@google.com <br> пробел в конце или в начале</td><td> pion cs@google.com</td>
+</tr>
+<tr><td>Точка</td><td> .</td><td> pion.cs@google.com</td><td> pion..cs@google.com <br> pion.cs@google..com <br> pion@googlecom</td></tr>
+<tr><td>Символ @</td><td>@</td> <td> pion@google.com</td><td> piongoogle.com <br> pion@@google.com</td></tr>
+<tr><td>Домен первого уровня</td><td> com</td><td> pion@google.com</td><td> pion@google.</td></tr>
+<tr><td>домен второго уровня</td><td> google</td><td> pion@google.com</td><td> pion@.com</td></tr>
+<tr><td>Количество символов от 12-30</td><td>-</td><td>-</td><td> -</td></tr>
+<tr><td>ГРАНИЧНЫЕ ЗНАЧЕНИЯ </td><td> </td><td> </td><td> </td></tr>
+<tr><td>Количество символов 11</td><td>-</td><td>-</td><td>@google.com</td></tr>
+<tr><td>Количество символов 12</td><td>-</td><td>p@google.com</td><td>-</td></tr>
+<tr><td>Количество символов 13</td><td>-</td><td> pi@google.com</td><td>-</td></tr>
+<tr><td>Количество символов 20</td><td>-</td><td> pion-cswer@google.com</td><td>-</td></tr>
+<tr><td>Количество символов 29</td><td>-</td><td> pion-cswer100ersdqp@google.com</td><td>-</td></tr>
+<tr><td>Количество символов 30</td><td>-</td><td> pion-cswer100ersedqp@google.com</td><td>-</td></tr>
+<tr><td>Количество символов 31</td><td>-</td><td>-</td><td>pion-cswer100erseddqp@google.com</td></tr>
+</tbody>
+</table>
