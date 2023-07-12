@@ -216,7 +216,7 @@
 <tr><td>Точка</td><td> .</td><td> pion.cs@google.com</td><td> pion..cs@google.com <br> pion.cs@google..com <br> pion@googlecom</td></tr>
 <tr><td>Символ @</td><td>@</td> <td> pion@google.com</td><td> piongoogle.com <br> pion@@google.com</td></tr>
 <tr><td>Домен первого уровня</td><td> com</td><td> pion@google.com</td><td> pion@google.</td></tr>
-<tr><td>домен второго уровня</td><td> google</td><td> pion@google.com</td><td> pion@.com</td></tr>
+<tr><td>Домен второго уровня</td><td> google</td><td> pion@google.com</td><td> pion@.com</td></tr>
 <tr><td>Количество символов от 12-30</td><td>-</td><td>-</td><td> -</td></tr>
 <tr><td>ГРАНИЧНЫЕ ЗНАЧЕНИЯ </td><td> </td><td> </td><td> </td></tr>
 <tr><td>Количество символов 11</td><td>-</td><td>-</td><td>@google.com</td></tr>
