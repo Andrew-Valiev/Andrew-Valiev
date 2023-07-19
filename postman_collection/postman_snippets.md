@@ -50,7 +50,7 @@ pm.test("Проверьте имя", function () {
 >## Сравнение значений в массиве
 
 ```javascript
-pm.test("Проверьте имя 5", () => {
+pm.test("сравнение значений в массиве", () => {
  const response = pm.response.json();
  pm.expect(response[0].id).to.eql(48001);
 });
@@ -81,11 +81,11 @@ pm.test("Проверьте имя 2000", function() {
 >## Сравнение текстовых значений в массиве
 
 ```javascript
-pm.test("Your test name 5000000", function () {
+pm.test("Your test name", function () {
     var jsonData = pm.response.json();
      console.log(jsonData); // вывод ответа на консоль 
-     алвдвfg = jsonData[2].name; // создаем переменную для искомой (значения) информации в теле ответа 
-           pm.expect(48001).to.eql(48001); // в первой скобке что наша обвяленная переменная равна такому то значения и проверяем это 
+    var name = jsonData[2].name; // создаем переменную для искомой (значения) информации в теле ответа 
+           pm.expect(name).to.eql(48001); // в первой скобке что наша обвяленная переменная равна такому то значения и проверяем это 
 });
 ```
 
@@ -129,6 +129,17 @@ pm.test("name test", function () {
 });
 ```
 
+```javascript
+// Проверка нового пользователя
+pm.test("Проверка данных нового пользователя", function () { 
+    let jsonData = pm.response.json();  // создание переменной, которая содержит весь наш ответ
+    let session = jsonData.session.userId; // создание переменной и обращение к нужному полю в объекте
+    console.log(session)
+   
+    pm.expect(session).to.eql("user-1456");
+});
+```
+
 ---
 
 >## Сохранения токена в локальное окружение
@@ -166,6 +177,45 @@ pm.test("Verify Json values", function () {
     pm.expect(jsonData.data.first_name).is.to.equal("Janet"); 
     pm.expect(jsonData.data.last_name).is.to.equal("Weaver"); 
      });
+```
+
+---
+
+>## Цикл перебора массива
+
+```javascript
+pm.test("Цикл перебора массива", function () {
+
+    let jsonData = pm.response.json();
+    let users = jsonData.users; // jsonData.users.массив   путь к нужному вложенному массиву объявим в переменной
+
+    console.log(users.length); // посмотреть в консоле размер массива
+
+    users.forEach(function(e){ // перебор массива function(e) e - перебор элементов массива
+      let username = e.username; // переменная для проверки пары ключ значения в каждом индексе массива let username = +e.username; -- + для сравнения чисел 
+      console.log(username);
+      let email = e.email;
+      //console.log(email);
+       
+
+       if (username == "joe") {
+        
+        pm.expect(username).to.eql("joe");
+        console.log(email);
+        pm.expect(email).to.eql("vaaplus@gmail.com");
+       }
+
+
+      let created = e.created; //
+      let zamena = created.replace("4", "0"); // замена символов можно убрать например запятые или точки с цифр для сравнения чисел, не строк
+      let zamena_2 = zamena.replace("1", "7"); // вторая замена
+      let nam_ber = +zamena_2; // перевод строки в число
+      console.log(nam_ber);
+
+
+    }); 
+
+});
 ```
 
 ---
