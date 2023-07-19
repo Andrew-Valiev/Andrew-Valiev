@@ -1,0 +1,1785 @@
+{
+	"info": {
+		"_postman_id": "99a8b1b2-d248-491e-8ba8-521b5e8786c4",
+		"name": "m3o.com query collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17749087"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Create user",
+					"item": [
+						{
+							"name": "Create user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка нового пользователя\r",
+											"pm.test(\"Проверка данных нового пользователя\", function () { \r",
+											"    var jsonData = pm.response.json(); \r",
+											"    var expectedObject = {  \r",
+											"        \"id\":\"user-1456\",\r",
+											"        \"username\":\"joe\",\r",
+											"        \"email\":\"vaaplus@gmail.com\"\r",
+											"    }\r",
+											"    pm.expect(jsonData).to.include(expectedObject);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "vaaplus@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "id",
+											"value": "user-1456",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "Password123",
+											"type": "text"
+										},
+										{
+											"key": "username",
+											"value": "joe",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "https://api.m3o.com/v1/user/Create",
+									"protocol": "https",
+									"host": [
+										"api",
+										"m3o",
+										"com"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверить существование нового пользователя\r",
+											"pm.test(\"Новый пользователь существует\", function () {\r",
+											"\r",
+											"    let jsonData = pm.response.json();\r",
+											"    let users = jsonData.users; \r",
+											"\r",
+											"    users.forEach(function(e){ \r",
+											"      let id = e.id;\r",
+											"      let username = e.username;\r",
+											"      let email = e.email;\r",
+											"\r",
+											"       if (username == \"joe\") {\r",
+											"        pm.expect(id).to.eql(\"user-1456\");\r",
+											"        pm.expect(username).to.eql(\"joe\");\r",
+											"        pm.expect(email).to.eql(\"vaaplus@gmail.com\");\r",
+											"       }\r",
+											"    }); \r",
+											"\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"offset\": 0,\r\n    \"limit\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/List",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"List"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read account",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let email = jsonData.account.email; \r",
+											"    let id = jsonData.account.id;\r",
+											"    pm.expect(id).to.eql(\"user-1456\");\r",
+											"    pm.expect(email).to.eql(\"vaaplus@gmail.com\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"id\": \"user-1456\",\r\n    \"username\": \"joe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Read",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Read"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login | Logout",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password123\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Read Session",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сравнение ключей сессии session.id c переменной среды sessionId\r",
+											"pm.test(\"пользователь в сессии\", function () {\r",
+											"    let jsonData = pm.response.json();\r",
+											"    let id = jsonData.session.id;\r",
+											"    pm.expect(id).to.eql(pm.environment.get(\"sessionId\"));\r",
+											" \r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/ReadSession",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"ReadSession"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка выхода из системы\r",
+											"pm.test(\"вход из системы\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Checking logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 500\", function () {\r",
+											"    pm.response.to.have.status(500);\r",
+											"}); \r",
+											"\r",
+											"// Проверка выхода из системы\r",
+											"pm.test(\"выход из системы\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"   \r",
+											"    pm.expect(jsonData.id).to.eql(\"go.micro.client\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"Internal Server Error\");\r",
+											"});\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/ReadSession",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"ReadSession"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update Password",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password123\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка обновления пароля\r",
+											"pm.test(\"пароль обновлен\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"user-1456\",\r\n    \"oldPassword\": \"Password123\",\r\n    \"newPassword\": \"Password2789\",\r\n    \"confirmPassword\": \"Password2789\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/UpdatePassword",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"UpdatePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login new password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password2789\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка обновления пароля\r",
+											"pm.test(\"пароль обновлен\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"user-1456\",\r\n    \"oldPassword\": \"Password2789\",\r\n    \"newPassword\": \"Password123\",\r\n    \"confirmPassword\": \"Password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/UpdatePassword",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"UpdatePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password123\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка выхода из системы\r",
+											"pm.test(\"вход из системы\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Update username",
+					"item": [
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password123\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update username",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка обновления пароля\r",
+											"pm.test(\"пароль обновлен\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"user-1456\",\r\n  \"username\": \"joenew-del\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Checking new name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"\r",
+											"// Проверка нового имени пользователя\r",
+											"pm.test(\"новое имя пользователя\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let email = jsonData.account.email; \r",
+											"    let id = jsonData.account.id;\r",
+											"    let username = jsonData.account.username;\r",
+											"\r",
+											"    pm.expect(id).to.eql(\"user-1456\");\r",
+											"    pm.expect(email).to.eql(\"vaaplus@gmail.com\");\r",
+											"    pm.expect(username).to.eql(\"joenew-del\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"id\": \"user-1456\",\r\n    \"username\": \"joe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Read",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Read"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return old username",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка обновления пароля\r",
+											"pm.test(\"пароль обновлен\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"id\": \"user-1456\",\r\n  \"username\": \"joe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Update",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Update"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Checking old name",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"\r",
+											"// Проверка старого имени пользователя\r",
+											"pm.test(\"старое имя пользователя\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let email = jsonData.account.email; \r",
+											"    let id = jsonData.account.id;\r",
+											"    let username = jsonData.account.username;\r",
+											"\r",
+											"    pm.expect(id).to.eql(\"user-1456\");\r",
+											"    pm.expect(email).to.eql(\"vaaplus@gmail.com\");\r",
+											"    pm.expect(username).to.eql(\"joe\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"id\": \"user-1456\",\r\n    \"username\": \"joe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Read",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Read"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка выхода из системы\r",
+											"pm.test(\"вход из системы\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Forgot your password",
+					"item": [
+						{
+							"name": "Send Password Reset Email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка отправки пароля по почте\r",
+											"pm.test(\"отправка пароля по почте\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"subject\": \"Password reset\",\r\n    \"textContent\": \"Hi there,\\n click here to reset your password: myapp.com/reset/code?=$code\",\r\n    \"expiration\": 1800,\r\n    \"fromName\": \"joe\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/SendPasswordResetEmail",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"SendPasswordResetEmail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Reset Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка сброса пароля\r",
+											"pm.test(\"сброс пароля\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"code\": \"S4QzKnVX\",\r\n    \"newPassword\": \"NewPassword1\",\r\n    \"confirmPassword\": \"NewPassword1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/ResetPassword",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"ResetPassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login new password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"NewPassword1\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Return Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка обновления пароля\r",
+											"pm.test(\"пароль обновлен\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"userId\": \"user-1456\",\r\n    \"oldPassword\": \"NewPassword1\",\r\n    \"newPassword\": \"Password123\",\r\n    \"confirmPassword\": \"Password123\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/UpdatePassword",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"UpdatePassword"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка входа в систему\r",
+											"pm.test(\"вход в систему\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    let userId = jsonData.session.userId; \r",
+											"    let id = jsonData.session.id;\r",
+											"    \r",
+											"    pm.expect(userId).to.eql(\"user-1456\");\r",
+											"    pm.expect(id).to.be.not.empty;\r",
+											"});\r",
+											"\r",
+											"// Сохранения id сесии в локальное окружение \r",
+											"var jsonData = JSON.parse(responseBody);\r",
+											"postman.setEnvironmentVariable(\"sessionId\",jsonData.session.id);\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"vaaplus@gmail.com\",\r\n    \"password\": \"Password123\" ,\r\n    \"username\": \"joe\",\r\n    \"id\": \"user-1456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Login",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Logout",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"// Проверка статус кода \r",
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверка выхода из системы\r",
+											"pm.test(\"вход из системы\", function () { \r",
+											"    let jsonData = pm.response.json(); \r",
+											"    pm.expect(jsonData).to.be.empty;\r",
+											"});\r",
+											"\r",
+											"\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "session_id",
+											"value": "{{sessionId}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Logout",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Delete user",
+					"item": [
+						{
+							"name": "Delete user",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\": \"user-1456-del\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/Delete",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"Delete"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "User deleted",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"статус код 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"}); \r",
+											"\r",
+											"// Проверить, что пользователь удален\r",
+											"pm.test(\"Пользователь не существует\", function () {\r",
+											"\r",
+											"    let jsonData = pm.response.json();\r",
+											"    let users = jsonData.users; \r",
+											"\r",
+											"    users.forEach(function(e){ \r",
+											"      let id = e.id;\r",
+											"      let username = e.username;\r",
+											"      let email = e.email;\r",
+											"\r",
+											"       if (username == \"joe-del\") {\r",
+											"        pm.expect(id).to.eql(\"user-1456-del\");\r",
+											"        pm.expect(username).to.eql(\"joe-del\");\r",
+											"        pm.expect(email).to.eql(\"vaaplus.del@gmail.com\");\r",
+											"       }\r",
+											"\r",
+											"       pm.expect(email).to.not.eql(\"vaaplus.del@gmail.com\");\r",
+											"    }); \r",
+											"\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"offset\": 0,\r\n    \"limit\": 100\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{base_url}}/v1/user/List",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"v1",
+										"user",
+										"List"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
