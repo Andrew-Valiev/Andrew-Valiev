@@ -25,7 +25,7 @@
 
 **Шаги по воспроизведению:**
 
-1. "Отправить запроса методом POST на endpoint <https://api.m3o.com/v1/user/Update>  
+1. "Отправить запрос методом POST на endpoint <https://api.m3o.com/v1/user/Update>  
 
 * PAYLOAD:
 
